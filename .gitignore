@@ -1,0 +1,5 @@
+.streamlit/
+.env*
+private/
+output/
+__pycache__/

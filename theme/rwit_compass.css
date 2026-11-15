@@ -1,0 +1,195 @@
+/* Platform Compass dashboard-only theme.
+ * Curated from rwit-tokens.css (2026-11-12), not the social post template.
+ * Only scoped, minimal overrides; no icons, assets or personal data.
+ */
+:root {
+  --compass-purple: #7E1DFE;
+  --compass-green: #15A795;
+  --compass-chart-green: #0e7a6d;
+  --compass-yellow: #FFB802;
+  --compass-ink: #343030;
+  --compass-muted: #615f64;
+  --compass-ground: #f7f6f2;
+  --compass-surface: #ffffff;
+  --compass-divider: #d8d5d5;
+  --compass-overview: #fffad4;
+  --compass-overview-border: #e6c708;
+  --compass-radius: 14px;
+  --compass-card-radius: 20px;
+  --compass-font: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* Explicitly keep the application readable if Poppins is not available. */
+[data-testid="stAppViewContainer"] {
+  background-color: var(--compass-ground);
+  color: var(--compass-ink);
+  font-family: var(--compass-font);
+}
+
+/* Existing platform overview containers. */
+.st-key-community_overview,
+.st-key-meetup_community_overview,
+.st-key-linkedin_community_overview {
+  background: var(--compass-overview);
+  border: 1px solid var(--compass-overview-border);
+  border-radius: var(--compass-card-radius);
+  padding: 24px 28px;
+}
+
+.st-key-community_overview [data-testid="stVerticalBlockBorderWrapper"],
+.st-key-meetup_community_overview [data-testid="stVerticalBlockBorderWrapper"],
+.st-key-linkedin_community_overview [data-testid="stVerticalBlockBorderWrapper"] {
+  border-radius: var(--compass-radius);
+}
+
+/* Landing page: Option 4 / evidence chips and interest cards.
+ * This intentionally targets only the interest section, not the other pages.
+ */
+.rwit-interests {
+  margin: 0 0 0.8rem;
+}
+.rwit-interests__cards {
+  display: grid;
+  gap: .8rem;
+  margin-top: 0;
+}
+.rwit-interest-card {
+  background: var(--compass-surface);
+  border: 1px solid var(--compass-divider);
+  border-left: 4px solid var(--compass-purple);
+  border-radius: var(--compass-radius);
+  padding: 1rem 1.15rem;
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--compass-ink) 8%, transparent);
+}
+.rwit-interest-card__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .65rem;
+  flex-wrap: wrap;
+  margin-bottom: .75rem;
+}
+.rwit-interest-card__title {
+  color: var(--compass-ink);
+  font-size: 1.08rem;
+  font-weight: 750;
+  line-height: 1.4;
+}
+.rwit-interest-card__scope {
+  background: color-mix(in srgb, var(--compass-purple) 11%, var(--compass-surface));
+  color: var(--compass-purple);
+  border-radius: 999px;
+  font-size: .8rem;
+  font-weight: 700;
+  padding: .25rem .65rem;
+  white-space: nowrap;
+}
+.rwit-interest-card__evidence {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  align-items: stretch;
+}
+.rwit-interest-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  border-radius: 999px;
+  padding: .42rem .75rem;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--compass-ink);
+  line-height: 1.4;
+  border: 1px solid transparent;
+}
+.rwit-interest-chip strong {
+  color: var(--compass-ink);
+  font-weight: 750;
+}
+.rwit-interest-chip--whatsapp {
+  background: color-mix(in srgb, var(--compass-green) 16%, var(--compass-surface));
+  border-color: color-mix(in srgb, var(--compass-green) 30%, var(--compass-surface));
+}
+.rwit-interest-chip--linkedin {
+  background: color-mix(in srgb, var(--compass-purple) 10%, var(--compass-surface));
+  border-color: color-mix(in srgb, var(--compass-purple) 22%, var(--compass-surface));
+}
+.rwit-interest-chip--meetup {
+  background: color-mix(in srgb, var(--compass-yellow) 22%, var(--compass-surface));
+  border-color: color-mix(in srgb, var(--compass-yellow) 48%, var(--compass-surface));
+}
+.rwit-interests__note {
+  color: var(--compass-muted);
+  font-size: .83rem;
+  line-height: 1.5;
+  margin: .7rem .1rem 0;
+}
+@media (max-width: 640px) {
+  .st-key-community_overview,
+  .st-key-meetup_community_overview,
+  .st-key-linkedin_community_overview { padding: 16px; }
+  .rwit-interest-card { padding: .85rem; }
+  .rwit-interest-chip { border-radius: .7rem; }
+}
+
+/* Platform icon badges: visual accents derived from the Compass theme. */
+.rwit-interest-chip__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: .35rem;
+  background: var(--compass-ink);
+  color: var(--compass-surface);
+  font-family: var(--compass-font);
+  font-size: .75rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.rwit-interest-chip__icon svg { width: 1rem; height: 1rem; }
+.rwit-interest-chip__icon--whatsapp { background: var(--compass-chart-green); border-radius: 50%; }
+.rwit-interest-chip__icon--linkedin { background: var(--compass-purple); }
+.rwit-interest-chip__icon--meetup { background: var(--compass-yellow); color: var(--compass-ink); font-style: italic; }
+
+/* Landing-page section rhythm: more separation between distinct topics,
+ * but tighter association between each heading and its content.
+ * These keys are defined in overview_app.py; other dashboards are unaffected.
+ */
+.st-key-overview_interests_section,
+.st-key-overview_engagement_section {
+  margin-top: 1.5rem;
+}
+
+.st-key-overview_interests_section > div[data-testid="stVerticalBlock"],
+.st-key-overview_engagement_section > div[data-testid="stVerticalBlock"] {
+  gap: .35rem;
+}
+
+@media (max-width: 640px) {
+  .st-key-overview_interests_section,
+  .st-key-overview_engagement_section {
+    margin-top: 1rem;
+  }
+}
+
+
+/* Platform Compass sidebar branding */
+.st-key-rwit_sidebar_brand {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.st-key-rwit_sidebar_brand img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+/* Separate informational pages from the analytics navigation. */
+.st-key-rwit_about_menu_separator {
+  margin-top: 1rem;
+  margin-bottom: .65rem;
+}

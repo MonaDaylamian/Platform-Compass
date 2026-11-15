@@ -1,0 +1,12 @@
+{
+  "name": "Sample Tech Community",
+  "url": "https://example.com/",
+  "snapshot_date": "2026-09-30",
+  "report_start": "2026-01-01",
+  "report_end": "2026-09-30",
+  "members": 1150,
+  "rating": 4.7,
+  "ratings_count": 93,
+  "source": "Fully synthetic portfolio demonstration",
+  "report_generated_at_utc": "2026-10-01T10:00:00+00:00"
+}

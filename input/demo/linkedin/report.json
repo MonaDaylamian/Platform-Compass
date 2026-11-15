@@ -1,0 +1,328 @@
+{
+  "schema": "rwit_linkedin_v1",
+  "generated_at_utc": "2026-10-01T10:00:00+00:00",
+  "content_period": [
+    "2026-01-01",
+    "2026-09-30"
+  ],
+  "followers_total": 2480,
+  "totals": {
+    "posts": 57,
+    "impressions": 66780,
+    "reactions": 1854,
+    "comments": 369,
+    "reposts": 243,
+    "clicks": 2862,
+    "page_views": 4830,
+    "daily_unique_visitors_sum": 3100
+  },
+  "monthly_content": [
+    {
+      "month": "2026-01",
+      "posts": 5,
+      "impressions": 4700,
+      "reactions": 130,
+      "comments": 25,
+      "reposts": 15,
+      "clicks": 210
+    },
+    {
+      "month": "2026-02",
+      "posts": 6,
+      "impressions": 5380,
+      "reactions": 149,
+      "comments": 29,
+      "reposts": 18,
+      "clicks": 237
+    },
+    {
+      "month": "2026-03",
+      "posts": 7,
+      "impressions": 6060,
+      "reactions": 168,
+      "comments": 33,
+      "reposts": 21,
+      "clicks": 264
+    },
+    {
+      "month": "2026-04",
+      "posts": 8,
+      "impressions": 6740,
+      "reactions": 187,
+      "comments": 37,
+      "reposts": 24,
+      "clicks": 291
+    },
+    {
+      "month": "2026-05",
+      "posts": 5,
+      "impressions": 7420,
+      "reactions": 206,
+      "comments": 41,
+      "reposts": 27,
+      "clicks": 318
+    },
+    {
+      "month": "2026-06",
+      "posts": 6,
+      "impressions": 8100,
+      "reactions": 225,
+      "comments": 45,
+      "reposts": 30,
+      "clicks": 345
+    },
+    {
+      "month": "2026-07",
+      "posts": 7,
+      "impressions": 8780,
+      "reactions": 244,
+      "comments": 49,
+      "reposts": 33,
+      "clicks": 372
+    },
+    {
+      "month": "2026-08",
+      "posts": 8,
+      "impressions": 9460,
+      "reactions": 263,
+      "comments": 53,
+      "reposts": 36,
+      "clicks": 399
+    },
+    {
+      "month": "2026-09",
+      "posts": 5,
+      "impressions": 10140,
+      "reactions": 282,
+      "comments": 57,
+      "reposts": 39,
+      "clicks": 426
+    }
+  ],
+  "monthly_visitors": [
+    {
+      "month": "2026-01",
+      "page_views": 330
+    },
+    {
+      "month": "2026-02",
+      "page_views": 375
+    },
+    {
+      "month": "2026-03",
+      "page_views": 420
+    },
+    {
+      "month": "2026-04",
+      "page_views": 465
+    },
+    {
+      "month": "2026-05",
+      "page_views": 510
+    },
+    {
+      "month": "2026-06",
+      "page_views": 555
+    },
+    {
+      "month": "2026-07",
+      "page_views": 600
+    },
+    {
+      "month": "2026-08",
+      "page_views": 645
+    },
+    {
+      "month": "2026-09",
+      "page_views": 690
+    }
+  ],
+  "top_posts": [
+    {
+      "date": "2026-01-12",
+      "title": "An introduction to responsible AI",
+      "impressions": 2100,
+      "reactions": 65,
+      "comments": 14,
+      "reposts": 8,
+      "clicks": 35,
+      "url": ""
+    },
+    {
+      "date": "2026-02-12",
+      "title": "Mock interview practice",
+      "impressions": 2250,
+      "reactions": 74,
+      "comments": 16,
+      "reposts": 9,
+      "clicks": 38,
+      "url": ""
+    },
+    {
+      "date": "2026-03-12",
+      "title": "Building an inclusive tech community",
+      "impressions": 2400,
+      "reactions": 83,
+      "comments": 18,
+      "reposts": 10,
+      "clicks": 41,
+      "url": ""
+    },
+    {
+      "date": "2026-04-12",
+      "title": "Python learning circle",
+      "impressions": 2550,
+      "reactions": 92,
+      "comments": 20,
+      "reposts": 11,
+      "clicks": 44,
+      "url": ""
+    },
+    {
+      "date": "2026-05-12",
+      "title": "Networking for career growth",
+      "impressions": 2700,
+      "reactions": 101,
+      "comments": 22,
+      "reposts": 12,
+      "clicks": 47,
+      "url": ""
+    }
+  ],
+  "demographics": {
+    "followers": {
+      "Location": [
+        {
+          "name": "Rotterdam",
+          "count": 860
+        },
+        {
+          "name": "Amsterdam",
+          "count": 470
+        },
+        {
+          "name": "The Hague",
+          "count": 330
+        }
+      ],
+      "Industry": [
+        {
+          "name": "Software",
+          "count": 910
+        },
+        {
+          "name": "Education",
+          "count": 410
+        },
+        {
+          "name": "Consulting",
+          "count": 300
+        }
+      ],
+      "Job function": [
+        {
+          "name": "Engineering",
+          "count": 740
+        },
+        {
+          "name": "Product",
+          "count": 460
+        },
+        {
+          "name": "Operations",
+          "count": 310
+        }
+      ],
+      "Seniority": [
+        {
+          "name": "Entry",
+          "count": 660
+        },
+        {
+          "name": "Mid-level",
+          "count": 790
+        },
+        {
+          "name": "Senior",
+          "count": 520
+        }
+      ],
+      "Company size": [
+        {
+          "name": "1-50",
+          "count": 640
+        },
+        {
+          "name": "51-200",
+          "count": 540
+        },
+        {
+          "name": "201+",
+          "count": 700
+        }
+      ]
+    }
+  },
+  "topic_analysis": {
+    "post_count": 57,
+    "readable_posts": 57,
+    "unreadable_posts": 0,
+    "topics": [
+      {
+        "topic": "AI & Technical Learning",
+        "posts": 13,
+        "impressions": 5200,
+        "reactions": 290,
+        "comments": 45,
+        "reposts": 24,
+        "interactions": 359,
+        "interactions_per_post": 27.62,
+        "interaction_rate": 0.069
+      },
+      {
+        "topic": "Career & Opportunities",
+        "posts": 12,
+        "impressions": 6200,
+        "reactions": 330,
+        "comments": 54,
+        "reposts": 28,
+        "interactions": 412,
+        "interactions_per_post": 34.33,
+        "interaction_rate": 0.0665
+      },
+      {
+        "topic": "Networking & Community",
+        "posts": 11,
+        "impressions": 7200,
+        "reactions": 370,
+        "comments": 63,
+        "reposts": 32,
+        "interactions": 465,
+        "interactions_per_post": 42.27,
+        "interaction_rate": 0.0646
+      },
+      {
+        "topic": "Events & Announcements",
+        "posts": 10,
+        "impressions": 8200,
+        "reactions": 410,
+        "comments": 72,
+        "reposts": 36,
+        "interactions": 518,
+        "interactions_per_post": 51.8,
+        "interaction_rate": 0.0632
+      },
+      {
+        "topic": "Women in Tech & Inspiration",
+        "posts": 11,
+        "impressions": 9200,
+        "reactions": 450,
+        "comments": 81,
+        "reposts": 40,
+        "interactions": 571,
+        "interactions_per_post": 51.91,
+        "interaction_rate": 0.0621
+      }
+    ]
+  }
+}

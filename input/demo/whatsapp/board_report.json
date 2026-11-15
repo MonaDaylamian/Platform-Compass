@@ -1,0 +1,483 @@
+{
+  "schema_version": 3,
+  "dataset_kind": "rwit_board_aggregate",
+  "review_status": "local_review_required",
+  "generated_at_utc": "2026-10-01T10:00:00+00:00",
+  "period": {
+    "start": "2026-01-05",
+    "end": "2026-09-13"
+  },
+  "privacy": {
+    "min_contributors_per_period": 5,
+    "granularity": "calendar_weeks_merged"
+  },
+  "overall": {
+    "messages": 2267,
+    "distinct_contributors": 84,
+    "conversations": 318,
+    "likely_questions": 744
+  },
+  "periods": [
+    {
+      "start": "2026-01-05",
+      "end": "2026-01-11",
+      "messages": 42,
+      "active_contributors": 12,
+      "conversation_starts": 6,
+      "active_conversations": 9,
+      "likely_questions": 14,
+      "links": 8,
+      "media": 6
+    },
+    {
+      "start": "2026-01-12",
+      "end": "2026-01-18",
+      "messages": 49,
+      "active_contributors": 13,
+      "conversation_starts": 7,
+      "active_conversations": 10,
+      "likely_questions": 16,
+      "links": 9,
+      "media": 7
+    },
+    {
+      "start": "2026-01-19",
+      "end": "2026-01-25",
+      "messages": 56,
+      "active_contributors": 14,
+      "conversation_starts": 8,
+      "active_conversations": 11,
+      "likely_questions": 18,
+      "links": 11,
+      "media": 8
+    },
+    {
+      "start": "2026-01-26",
+      "end": "2026-02-01",
+      "messages": 63,
+      "active_contributors": 15,
+      "conversation_starts": 9,
+      "active_conversations": 12,
+      "likely_questions": 21,
+      "links": 12,
+      "media": 9
+    },
+    {
+      "start": "2026-02-02",
+      "end": "2026-02-08",
+      "messages": 70,
+      "active_contributors": 16,
+      "conversation_starts": 10,
+      "active_conversations": 13,
+      "likely_questions": 23,
+      "links": 14,
+      "media": 10
+    },
+    {
+      "start": "2026-02-09",
+      "end": "2026-02-15",
+      "messages": 77,
+      "active_contributors": 17,
+      "conversation_starts": 6,
+      "active_conversations": 14,
+      "likely_questions": 25,
+      "links": 15,
+      "media": 11
+    },
+    {
+      "start": "2026-02-16",
+      "end": "2026-02-22",
+      "messages": 84,
+      "active_contributors": 18,
+      "conversation_starts": 7,
+      "active_conversations": 15,
+      "likely_questions": 28,
+      "links": 16,
+      "media": 12
+    },
+    {
+      "start": "2026-02-23",
+      "end": "2026-03-01",
+      "messages": 48,
+      "active_contributors": 19,
+      "conversation_starts": 8,
+      "active_conversations": 9,
+      "likely_questions": 16,
+      "links": 9,
+      "media": 6
+    },
+    {
+      "start": "2026-03-02",
+      "end": "2026-03-08",
+      "messages": 55,
+      "active_contributors": 12,
+      "conversation_starts": 9,
+      "active_conversations": 10,
+      "likely_questions": 18,
+      "links": 11,
+      "media": 7
+    },
+    {
+      "start": "2026-03-09",
+      "end": "2026-03-15",
+      "messages": 62,
+      "active_contributors": 13,
+      "conversation_starts": 10,
+      "active_conversations": 11,
+      "likely_questions": 20,
+      "links": 12,
+      "media": 8
+    },
+    {
+      "start": "2026-03-16",
+      "end": "2026-03-22",
+      "messages": 69,
+      "active_contributors": 14,
+      "conversation_starts": 6,
+      "active_conversations": 12,
+      "likely_questions": 23,
+      "links": 13,
+      "media": 9
+    },
+    {
+      "start": "2026-03-23",
+      "end": "2026-03-29",
+      "messages": 76,
+      "active_contributors": 15,
+      "conversation_starts": 7,
+      "active_conversations": 13,
+      "likely_questions": 25,
+      "links": 15,
+      "media": 10
+    },
+    {
+      "start": "2026-03-30",
+      "end": "2026-04-05",
+      "messages": 83,
+      "active_contributors": 16,
+      "conversation_starts": 8,
+      "active_conversations": 14,
+      "likely_questions": 27,
+      "links": 16,
+      "media": 11
+    },
+    {
+      "start": "2026-04-06",
+      "end": "2026-04-12",
+      "messages": 47,
+      "active_contributors": 17,
+      "conversation_starts": 9,
+      "active_conversations": 15,
+      "likely_questions": 15,
+      "links": 9,
+      "media": 6
+    },
+    {
+      "start": "2026-04-13",
+      "end": "2026-04-19",
+      "messages": 54,
+      "active_contributors": 18,
+      "conversation_starts": 10,
+      "active_conversations": 9,
+      "likely_questions": 18,
+      "links": 10,
+      "media": 7
+    },
+    {
+      "start": "2026-04-20",
+      "end": "2026-04-26",
+      "messages": 61,
+      "active_contributors": 19,
+      "conversation_starts": 6,
+      "active_conversations": 10,
+      "likely_questions": 20,
+      "links": 12,
+      "media": 8
+    },
+    {
+      "start": "2026-04-27",
+      "end": "2026-05-03",
+      "messages": 68,
+      "active_contributors": 12,
+      "conversation_starts": 7,
+      "active_conversations": 11,
+      "likely_questions": 22,
+      "links": 13,
+      "media": 9
+    },
+    {
+      "start": "2026-05-04",
+      "end": "2026-05-10",
+      "messages": 75,
+      "active_contributors": 13,
+      "conversation_starts": 8,
+      "active_conversations": 12,
+      "likely_questions": 25,
+      "links": 15,
+      "media": 10
+    },
+    {
+      "start": "2026-05-11",
+      "end": "2026-05-17",
+      "messages": 82,
+      "active_contributors": 14,
+      "conversation_starts": 9,
+      "active_conversations": 13,
+      "likely_questions": 27,
+      "links": 16,
+      "media": 11
+    },
+    {
+      "start": "2026-05-18",
+      "end": "2026-05-24",
+      "messages": 46,
+      "active_contributors": 15,
+      "conversation_starts": 10,
+      "active_conversations": 14,
+      "likely_questions": 15,
+      "links": 9,
+      "media": 6
+    },
+    {
+      "start": "2026-05-25",
+      "end": "2026-05-31",
+      "messages": 53,
+      "active_contributors": 16,
+      "conversation_starts": 6,
+      "active_conversations": 15,
+      "likely_questions": 17,
+      "links": 10,
+      "media": 7
+    },
+    {
+      "start": "2026-06-01",
+      "end": "2026-06-07",
+      "messages": 60,
+      "active_contributors": 17,
+      "conversation_starts": 7,
+      "active_conversations": 9,
+      "likely_questions": 20,
+      "links": 12,
+      "media": 8
+    },
+    {
+      "start": "2026-06-08",
+      "end": "2026-06-14",
+      "messages": 67,
+      "active_contributors": 18,
+      "conversation_starts": 8,
+      "active_conversations": 10,
+      "likely_questions": 22,
+      "links": 13,
+      "media": 9
+    },
+    {
+      "start": "2026-06-15",
+      "end": "2026-06-21",
+      "messages": 74,
+      "active_contributors": 19,
+      "conversation_starts": 9,
+      "active_conversations": 11,
+      "likely_questions": 24,
+      "links": 14,
+      "media": 10
+    },
+    {
+      "start": "2026-06-22",
+      "end": "2026-06-28",
+      "messages": 81,
+      "active_contributors": 12,
+      "conversation_starts": 10,
+      "active_conversations": 12,
+      "likely_questions": 27,
+      "links": 16,
+      "media": 11
+    },
+    {
+      "start": "2026-06-29",
+      "end": "2026-07-05",
+      "messages": 45,
+      "active_contributors": 13,
+      "conversation_starts": 6,
+      "active_conversations": 13,
+      "likely_questions": 15,
+      "links": 9,
+      "media": 6
+    },
+    {
+      "start": "2026-07-06",
+      "end": "2026-07-12",
+      "messages": 52,
+      "active_contributors": 14,
+      "conversation_starts": 7,
+      "active_conversations": 14,
+      "likely_questions": 17,
+      "links": 10,
+      "media": 7
+    },
+    {
+      "start": "2026-07-13",
+      "end": "2026-07-19",
+      "messages": 59,
+      "active_contributors": 15,
+      "conversation_starts": 8,
+      "active_conversations": 15,
+      "likely_questions": 19,
+      "links": 11,
+      "media": 8
+    },
+    {
+      "start": "2026-07-20",
+      "end": "2026-07-26",
+      "messages": 66,
+      "active_contributors": 16,
+      "conversation_starts": 9,
+      "active_conversations": 9,
+      "likely_questions": 22,
+      "links": 13,
+      "media": 9
+    },
+    {
+      "start": "2026-07-27",
+      "end": "2026-08-02",
+      "messages": 73,
+      "active_contributors": 17,
+      "conversation_starts": 10,
+      "active_conversations": 10,
+      "likely_questions": 24,
+      "links": 14,
+      "media": 10
+    },
+    {
+      "start": "2026-08-03",
+      "end": "2026-08-09",
+      "messages": 80,
+      "active_contributors": 18,
+      "conversation_starts": 6,
+      "active_conversations": 11,
+      "likely_questions": 26,
+      "links": 16,
+      "media": 11
+    },
+    {
+      "start": "2026-08-10",
+      "end": "2026-08-16",
+      "messages": 44,
+      "active_contributors": 19,
+      "conversation_starts": 7,
+      "active_conversations": 12,
+      "likely_questions": 14,
+      "links": 8,
+      "media": 6
+    },
+    {
+      "start": "2026-08-17",
+      "end": "2026-08-23",
+      "messages": 51,
+      "active_contributors": 12,
+      "conversation_starts": 8,
+      "active_conversations": 13,
+      "likely_questions": 17,
+      "links": 10,
+      "media": 7
+    },
+    {
+      "start": "2026-08-24",
+      "end": "2026-08-30",
+      "messages": 58,
+      "active_contributors": 13,
+      "conversation_starts": 9,
+      "active_conversations": 14,
+      "likely_questions": 19,
+      "links": 11,
+      "media": 8
+    },
+    {
+      "start": "2026-08-31",
+      "end": "2026-09-06",
+      "messages": 65,
+      "active_contributors": 14,
+      "conversation_starts": 10,
+      "active_conversations": 15,
+      "likely_questions": 21,
+      "links": 13,
+      "media": 9
+    },
+    {
+      "start": "2026-09-07",
+      "end": "2026-09-13",
+      "messages": 72,
+      "active_contributors": 15,
+      "conversation_starts": 6,
+      "active_conversations": 9,
+      "likely_questions": 24,
+      "links": 14,
+      "media": 10
+    }
+  ],
+  "ai": {
+    "eligible_conversations": 280,
+    "attempted_conversations": 240,
+    "successful_requests": 230,
+    "failed_requests": 10,
+    "not_analyzed_conversations": 40,
+    "input_tokens": 410000,
+    "output_tokens": 78000,
+    "token_usage_complete": true,
+    "missing_usage_records": 0,
+    "average_duration_seconds": 1.35
+  },
+  "topics": [],
+  "signal_types": [],
+  "needs_by_topic": [
+    {
+      "name": "learning_and_technology",
+      "count": 51
+    },
+    {
+      "name": "career_and_job_opportunities",
+      "count": 43
+    },
+    {
+      "name": "mentorship_and_networking",
+      "count": 35
+    },
+    {
+      "name": "community_and_events",
+      "count": 24
+    },
+    {
+      "name": "entrepreneurship",
+      "count": 12
+    }
+  ],
+  "engagement": [
+    {
+      "name": "seek_information",
+      "count": 55
+    },
+    {
+      "name": "share_opportunity",
+      "count": 46
+    },
+    {
+      "name": "offer_support",
+      "count": 35
+    },
+    {
+      "name": "seek_advice",
+      "count": 30
+    },
+    {
+      "name": "share_experience",
+      "count": 25
+    }
+  ],
+  "response_status": {
+    "available": false,
+    "counts": null,
+    "percentages": null,
+    "denominator": null,
+    "excluded_or_unclear": null
+  }
+}

@@ -1,0 +1,104 @@
+/* Optional Sample Tech Community About pages, using existing compass theme tokens. */
+.st-key-about_community_intro,
+.st-key-about_project_intro {
+  background: var(--compass-overview);
+  border: 1px solid var(--compass-overview-border);
+  border-radius: var(--compass-card-radius);
+  padding: 1.4rem 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.rwit-about-nav-spacer {
+  margin-top: 1rem;
+  padding-top: .85rem;
+  border-top: 1px solid var(--compass-divider);
+}
+
+.rwit-flowchart {
+  margin: .25rem 0 1rem;
+}
+.rwit-flowchart__group {
+  border: 1px solid color-mix(in srgb, var(--compass-divider) 92%, white);
+  border-radius: var(--compass-radius);
+  padding: 1rem 1rem 1.2rem;
+  background: color-mix(in srgb, var(--compass-surface) 94%, var(--compass-ground));
+}
+.rwit-flowchart__group h4 {
+  margin: 0 0 1rem 0;
+  text-align: center;
+  color: var(--compass-ink);
+  font-size: 1.1rem;
+}
+.rwit-flowchart__group--processing {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.rwit-flowchart__group--review {
+  max-width: 560px;
+  margin: 0 auto;
+}
+.rwit-flowchart__row,
+.rwit-flowchart__stack {
+  display: flex;
+  gap: 1rem;
+}
+.rwit-flowchart__row--sources {
+  justify-content: space-between;
+}
+.rwit-flowchart__row--outputs {
+  justify-content: center;
+}
+.rwit-flowchart__stack {
+  flex-direction: column;
+  align-items: center;
+}
+.rwit-flowchart__stack--narrow .rwit-flowchart__card {
+  width: min(100%, 340px);
+}
+.rwit-flowchart__card {
+  border-radius: 22px;
+  padding: 1.1rem 1.2rem;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.3;
+  border: 2px solid var(--compass-divider);
+  background: var(--compass-surface);
+  color: var(--compass-ink);
+  flex: 1 1 0;
+}
+.rwit-flowchart__card--source {
+  background: color-mix(in srgb, var(--compass-green) 14%, white);
+  border-color: var(--compass-green);
+  color: color-mix(in srgb, var(--compass-ink) 84%, var(--compass-green));
+}
+.rwit-flowchart__card--process {
+  width: min(100%, 520px);
+  background: color-mix(in srgb, var(--compass-purple) 12%, white);
+  border-color: color-mix(in srgb, var(--compass-purple) 70%, white);
+  color: color-mix(in srgb, var(--compass-ink) 78%, var(--compass-purple));
+}
+.rwit-flowchart__card--review {
+  background: color-mix(in srgb, var(--compass-yellow) 18%, white);
+  border-color: color-mix(in srgb, var(--compass-yellow) 82%, var(--compass-ink) 8%);
+  color: color-mix(in srgb, var(--compass-ink) 86%, var(--compass-yellow));
+}
+.rwit-flowchart__arrow {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--compass-muted);
+  margin: .15rem 0;
+}
+@media (max-width: 900px) {
+  .rwit-flowchart__row {
+    flex-direction: column;
+  }
+  .rwit-flowchart__card--process,
+  .rwit-flowchart__stack--narrow .rwit-flowchart__card {
+    width: 100%;
+  }
+}
+@media (max-width: 640px) {
+  .st-key-about_community_intro,
+  .st-key-about_project_intro { padding: 1rem; }
+}
