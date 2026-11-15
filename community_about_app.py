@@ -4,6 +4,7 @@ from __future__ import annotations
 from pathlib import Path
 import streamlit as st
 from rwit_theme import apply_about_page_theme
+from rwit_data_mode import is_demo
 
 ASSETS = Path(__file__).resolve().parent / 'assets' / 'qr_codes'
 PLATFORMS = (
@@ -26,13 +27,23 @@ def show_community_about() -> None:
     apply_about_page_theme()
     st.title('About the Community')
     with st.container(key='about_community_intro'):
-        st.caption('ROTTERDAM WOMEN IN TECH')
+        if is_demo():
+            st.caption('SAMPLE TECH COMMUNITY')
+        else:
+            st.caption('ROTTERDAM WOMEN IN TECH')
         st.header('Connect · Empower · Support')
-        st.write(
-            'Sample Tech Community (Sample Tech Community) is a warm, international, volunteer-led '
-            'community offering a safe and inclusive space for women in tech to connect, '
-            'learn and grow professionally.'
-        )
+        if is_demo():
+            st.write(
+                'This sample Tech Community is a warm, international, volunteer-led '
+                'community offering a safe and inclusive space for women in tech to connect, '
+                'learn, and grow professionally.'
+            )
+        else:
+            st.write(
+                'Sample Tech Community (Sample Tech Community) is a warm, international, volunteer-led '
+                'community offering a safe and inclusive space for women in tech to connect, '
+                'learn and grow professionally.'
+            )
 
     st.subheader('Our mission & vision')
     left, right = st.columns(2, gap='medium')

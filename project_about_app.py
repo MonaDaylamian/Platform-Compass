@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import streamlit as st
 from rwit_theme import apply_about_page_theme
+from rwit_data_mode import is_demo
 
 DEVELOPER_URL = 'https://www.linkedin.com/in/mona-daylamian/'
 
@@ -69,14 +70,30 @@ def show_project_about() -> None:
     apply_about_page_theme()
     st.title('About the Project')
     with st.container(key='about_project_intro'):
-        st.caption('PLATFORM COMPASS · COMMUNITY INTELLIGENCE')
+        st.caption('PLATFORM COMPASS · COMMUNITY INTELLIGENCE' if is_demo() else 'PLATFORM COMPASS · COMMUNITY INTELLIGENCE')
         st.header('Turning community activity into meaningful insights')
-        st.write(
-            'Platform Compass is a privacy-conscious data analytics application that brings '
-            'together LinkedIn, Meetup and WhatsApp reporting to help Rotterdam Women '
-            'in Tech understand engagement, identify recurring themes and support '
-            'informed community decisions.'
-        )
+        if is_demo():
+            st.write(
+                'Platform Compass is a privacy-conscious community analytics application '
+                'designed to help communities and organizations better understand their '
+                "members' needs, interests, and engagement across social platforms, "
+                'without the time-consuming effort of manually reviewing individual '
+                'conversations and interactions.'
+            )
+            st.write(
+                'The board of Sample Tech Community (Sample Tech Community) needed a clearer '
+                "understanding of members' needs and priorities to guide future "
+                'activities and strategic planning. Platform Compass addresses this '
+                'challenge by transforming fragmented community activity into meaningful, '
+                'actionable insights that support evidence-based decisions.'
+            )
+        else:
+            st.write(
+                'Platform Compass is a privacy-conscious data analytics application that brings '
+                'together LinkedIn, Meetup and WhatsApp reporting to help Rotterdam Women '
+                'in Tech understand engagement, identify recurring themes and support '
+                'informed community decisions.'
+            )
 
     st.subheader('Project objectives')
     items = (
@@ -161,5 +178,17 @@ def show_project_about() -> None:
         )
 
     st.subheader('Project credit')
-    st.write('Platform Compass is a synthetic portfolio demonstration.')
+    if is_demo():
+        st.write(
+            'Platform Compass was designed and developed by **Mona Daylamian**, '
+            'a tech board member of Sample Tech Community (Sample Tech Community), in response '
+            'to a real-world challenge identified within the community.'
+        )
+        st.write(
+            'This public version is a portfolio demonstration built entirely on '
+            'synthetic data. It showcases the application\'s capabilities and '
+            'technical approach without exposing real community or member information.'
+        )
+    else:
+        st.write('Platform Compass is a synthetic portfolio demonstration.')
     st.link_button('Connect with Mona on LinkedIn', DEVELOPER_URL)
