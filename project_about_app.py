@@ -81,7 +81,7 @@ def show_project_about() -> None:
                 'conversations and interactions.'
             )
             st.write(
-                'The board of Sample Tech Community (Sample Tech Community) needed a clearer '
+                'The board of Rotterdam Women in Tech (RWiT) needed a clearer '
                 "understanding of members' needs and priorities to guide future "
                 'activities and strategic planning. Platform Compass addresses this '
                 'challenge by transforming fragmented community activity into meaningful, '
@@ -181,7 +181,7 @@ def show_project_about() -> None:
     if is_demo():
         st.write(
             'Platform Compass was designed and developed by **Mona Daylamian**, '
-            'a tech board member of Sample Tech Community (Sample Tech Community), in response '
+            'a tech board member of Rotterdam Women in Tech (RWiT), in response '
             'to a real-world challenge identified within the community.'
         )
         st.write(
