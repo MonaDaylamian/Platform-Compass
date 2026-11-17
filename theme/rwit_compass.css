@@ -193,3 +193,71 @@
   margin-top: 1rem;
   margin-bottom: .65rem;
 }
+
+/* ==========================================
+   Shared Reporting Badges
+   Board Dashboard | WhatsApp | LinkedIn | Meetup
+   ========================================== */
+/* Consistent reporting metadata badges across all four dashboard pages. */
+.compass-report-badges {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: .65rem;
+  margin: .25rem 0 .45rem;
+}
+.compass-report-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: .58rem .95rem;
+  min-height: 52px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.compass-report-badge--period {
+  background: #f0e8fa;
+  border-color: #d8c1ed;
+  color: #7140a9;
+}
+.compass-report-badge--generated {
+  background: #e5f5f2;
+  border-color: #b6e0d9;
+  color: #137f75;
+}
+.compass-report-badge__icon {
+  flex: 0 0 1.3rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.compass-report-badge__icon svg {
+  height: 1.3rem;
+  width: 1.3rem;
+}
+.compass-report-badge__content {
+  display: flex;
+  flex-direction: column;
+  gap: .12rem;
+  min-width: 0;
+  line-height: 1.25;
+}
+.compass-report-badge__label {
+  font-size: .65rem;
+  font-weight: 750;
+  letter-spacing: .055em;
+}
+.compass-report-badge__value {
+  font-size: .88rem;
+  font-weight: 720;
+  color: var(--compass-ink, #343030);
+  white-space: normal;
+}
+@media (max-width: 640px) {
+  .compass-report-badges { gap: .5rem; }
+  .compass-report-badge { width: 100%; border-radius: 15px; }
+}

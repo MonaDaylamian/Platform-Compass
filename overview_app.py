@@ -16,6 +16,7 @@ from scripts.community_overview import (
     interest_evidence, monthly_activity,
 )
 from rwit_theme import CHART_GREEN, CHART_PURPLE, CHART_YELLOW
+from dashboard_components import render_report_badges
 
 
 def _load_sources():
@@ -108,6 +109,24 @@ def _render_interest_section(interests: list[dict]) -> str:
     )
 
 def show_overview() -> None:
+    # Match WhatsApp Analytics metadata, not a potentially misleading union
+    # of independent LinkedIn, Meetup and WhatsApp date ranges.
+    sources, _errors = _load_sources()
+    whatsapp = sources["whatsapp"]
+    if whatsapp:
+        period = whatsapp["period"]
+        render_report_badges(
+            period["start"], period["end"], whatsapp.get("generated_at_utc"),
+            scope_note=(
+                "Dates refer to the WhatsApp report. LinkedIn and Meetup "
+                "may cover different reporting periods."
+            ),
+        )
+    else:
+        render_report_badges(
+            None, None, None,
+            scope_note="WhatsApp reporting metadata is currently unavailable.",
+        )
     st.markdown(
         "**Platform Compass** is a data analytics application designed to help "
         "Sample Tech Community understand community engagement and make "
@@ -116,7 +135,6 @@ def show_overview() -> None:
         "into community activity, growth, and engagement trends while "
         "respecting member privacy."
     )
-    sources, _errors = _load_sources()
     wa = sources["whatsapp"]
     li = sources["linkedin"]
     events = sources["meetup"][0] if sources["meetup"] else None

@@ -21,23 +21,79 @@ def render_overview_total(label: str, amount: int) -> None:
     )
 
 
+def _reporting_date(value: object) -> str | None:
+    """Format validated report date/timestamp; do not invent missing values."""
+    if value is None or value == "":
+        return None
+    try:
+        import pandas as pd
+        parsed = pd.Timestamp(value)
+        if pd.isna(parsed):
+            return None
+        return parsed.strftime("%d %b %Y")
+    except (ValueError, TypeError, OverflowError):
+        return None
+
+
+def render_report_badges(
+    period_start: object,
+    period_end: object,
+    generated_at: object,
+    *,
+    scope_note: str | None = None,
+) -> None:
+    """Show purple reporting-period and teal generation-date badges."""
+    start = _reporting_date(period_start)
+    end = _reporting_date(period_end)
+    period = f"{start} – {end}" if start and end else "Unavailable"
+    # Viewer date (not the data-generation timestamp).
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    viewed = datetime.now(ZoneInfo("Europe/Amsterdam")).strftime("%d %b %Y")
+    period = html.escape(period)
+    viewed = html.escape(viewed)
+
+    st.markdown(
+        '<div class="compass-report-badges" aria-label="Reporting information">'
+        '<div class="compass-report-badge compass-report-badge--period">'
+        '<span class="compass-report-badge__icon" aria-hidden="true">'
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+        'stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'
+        '<rect x="3" y="5" width="18" height="16" rx="2"/>'
+        '<path d="M7 3v4M17 3v4M3 10h18M8 14h3M13 14h3"/>'
+        '</svg></span>'
+        '<span class="compass-report-badge__content">'
+        '<span class="compass-report-badge__label">REPORTING PERIOD</span>'
+        f'<span class="compass-report-badge__value">{period}</span>'
+        '</span></div>'
+        '<div class="compass-report-badge compass-report-badge--generated">'
+        '<span class="compass-report-badge__icon" aria-hidden="true">'
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+        'stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'
+        '<rect x="3" y="5" width="18" height="16" rx="2"/>'
+        '<path d="M7 3v4M17 3v4M3 10h18m-12 5 2 2 4-4"/>'
+        '</svg></span>'
+        '<span class="compass-report-badge__content">'
+        '<span class="compass-report-badge__label">VIEWED ON</span>'
+        f'<span class="compass-report-badge__value">{viewed}</span>'
+        '</span></div></div>',
+        unsafe_allow_html=True,
+    )
+    if scope_note:
+        st.caption(scope_note)
+
+
 def render_analytics_header(
     title: str, period_start: str, period_end: str, generated_at: str | None,
     *, fallback_date: str | None = None,
 ) -> None:
-    """Unified analytics header. Date displayed is LinkedIn's period end, not build time."""
-    import pandas as pd
+    """Shared header used by all three individual analytics dashboards.
 
+    A snapshot/content period-end is not the true report generation time.
+    The fallback_date parameter remains accepted for existing callers.
+    """
     st.title(title)
-    start = pd.Timestamp(period_start).strftime("%d %B %Y")
-    end = pd.Timestamp(period_end).strftime("%d %B %Y")
-    st.write(f"**Reporting period:** {start} – {end}")
-    reference = shared_reporting_reference_date()
-    if reference:
-        date = pd.Timestamp(reference).strftime("%d %B %Y")
-        st.caption(f"Report generated at: {date}")
-    else:
-        st.caption("Report generated at: unavailable until LinkedIn report is prepared")
+    render_report_badges(period_start, period_end, generated_at)
 
 
 def shared_reporting_reference_date() -> str | None:
