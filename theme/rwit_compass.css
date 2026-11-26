@@ -26,6 +26,28 @@
   font-family: var(--compass-font);
 }
 
+/* Contrast for native Streamlit text on Compass' intentionally light canvas.
+ * A viewer may select Streamlit dark mode, but the dashboard body and overview
+ * cards remain light. Restrict these overrides to the app view: the dark
+ * sidebar, select inputs, charts and custom status colors stay unchanged.
+ */
+[data-testid="stAppViewContainer"] [data-testid="stMetricLabel"],
+[data-testid="stAppViewContainer"] [data-testid="stMetricLabel"] p,
+[data-testid="stAppViewContainer"] [data-testid="stMetricLabel"] span {
+  color: var(--compass-muted) !important;
+}
+
+[data-testid="stAppViewContainer"] [data-testid="stMetricValue"],
+[data-testid="stAppViewContainer"] [data-testid="stMetricValue"] > div {
+  color: var(--compass-ink) !important;
+}
+
+[data-testid="stAppViewContainer"] [data-testid="stWidgetLabel"],
+[data-testid="stAppViewContainer"] [data-testid="stWidgetLabel"] p,
+[data-testid="stAppViewContainer"] [data-testid="stWidgetLabel"] span {
+  color: var(--compass-ink) !important;
+}
+
 /* Existing platform overview containers. */
 .st-key-community_overview,
 .st-key-meetup_community_overview,
