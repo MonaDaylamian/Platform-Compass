@@ -9,58 +9,14 @@ DEVELOPER_URL = 'https://www.linkedin.com/in/mona-daylamian/'
 
 
 def _workflow() -> None:
-    """A native Streamlit Graphviz flowchart with actual connected arrows."""
-    diagram = r"""digraph RWIT {
-      graph [rankdir=TB, bgcolor="transparent", pad="0.24",
-             nodesep="0.55", ranksep="0.68", splines=polyline,
-             compound=true, fontname="Helvetica"]
-      node [shape=box, style="rounded,filled", penwidth=1.4,
-            fontname="Helvetica", fontsize=14, margin="0.25,0.18"]
-      edge [color="#909090", arrowsize=0.7, penwidth=1.3]
+    """Render the single animated workflow with responsive iframe height."""
+    from pathlib import Path
 
-      subgraph cluster_sources {
-        label="1. Data Sources"; labelloc="t"; fontsize=17;
-        color="#DEDEDE"; bgcolor="#F6F6F6"; style=rounded;
-        wa [label="WhatsApp exports", color="#159E94", fillcolor="#E2F5F2", fontcolor="#14554E"];
-        li [label="LinkedIn reports", color="#159E94", fillcolor="#E2F5F2", fontcolor="#14554E"];
-        me [label="Meetup reports", color="#159E94", fillcolor="#E2F5F2", fontcolor="#14554E"];
-        {rank=same; wa; li; me;}
-      }
-      subgraph cluster_processing {
-        label="2. Private Data Processing"; fontsize=17;
-        color="#DEDEDE"; bgcolor="#F6F6F6"; style=rounded;
-        parsing [label="Import, parse and validate", color="#9855EA", fillcolor="#F0E5FA", fontcolor="#523078"];
-        ai [label="Optional AI-assisted signal extraction\n(WhatsApp conversations only)", color="#9855EA", fillcolor="#F0E5FA", fontcolor="#523078"];
-        privacy [label="Aggregation and privacy controls", color="#9855EA", fillcolor="#F0E5FA", fontcolor="#523078"];
-        parsing -> ai [label="WhatsApp", fontsize=10];
-        ai -> privacy;
-        parsing -> privacy [label="LinkedIn / Meetup", fontsize=10];
-      }
-      subgraph cluster_review {
-        label="3. Review and Approval"; fontsize=17;
-        color="#DEDEDE"; bgcolor="#F6F6F6"; style=rounded;
-        validate [label="Validate reports", color="#D4A21F", fillcolor="#FFF3D2", fontcolor="#71551E"];
-        review [label="Owner review and release approval", color="#D4A21F", fillcolor="#FFF3D2", fontcolor="#71551E"];
-        validate -> review;
-      }
-      subgraph cluster_dashboard {
-        label="4. Platform Compass"; fontsize=17;
-        color="#DEDEDE"; bgcolor="#F6F6F6"; style=rounded;
-        board [label="Board Dashboard", color="#159E94", fillcolor="#E2F5F2", fontcolor="#14554E"];
-        platform [label="Platform Analytics", color="#159E94", fillcolor="#E2F5F2", fontcolor="#14554E"];
-        {rank=same; board; platform;}
-      }
-      wa -> parsing;
-      li -> parsing;
-      me -> parsing;
-      privacy -> validate;
-      review -> board;
-      review -> platform;
-    }"""
-    st.graphviz_chart(diagram, use_container_width=True)
+    workflow_path = Path(__file__).resolve().parent / "assets" / "diagrams" / "community_intelligence_workflow.html"
+    st.iframe(workflow_path, width="stretch", height="content")
     st.caption(
-        "Conceptual pipeline: source-specific parsing, optional WhatsApp AI extraction, "
-        "privacy-bounded reporting, and owner-approved release. "
+        "Source-specific processing, optional WhatsApp LLM extraction, "
+        "privacy-bounded reporting and owner-approved release. "
         "Cross-platform AI interpretation is a separate optional aggregate-only workflow."
     )
 

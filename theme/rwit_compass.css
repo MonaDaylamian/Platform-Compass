@@ -283,3 +283,81 @@
   .compass-report-badges { gap: .5rem; }
   .compass-report-badge { width: 100%; border-radius: 15px; }
 }
+
+/* BEGIN Compass header and button contrast */
+/* Keep the top bar on the same light canvas as the dashboard, regardless
+   of Streamlit's appearance mode. Do not recolor the sidebar or menu popup. */
+[data-testid="stHeader"] {
+  background-color: var(--compass-ground) !important;
+  color: var(--compass-ink) !important;
+}
+[data-testid="stHeader"] [data-testid="stToolbar"] button,
+[data-testid="stHeader"] [data-testid="stMainMenu"] button,
+[data-testid="stHeader"] button[aria-label="Main menu"],
+[data-testid="stHeader"] [data-testid="stAppDeployButton"] button,
+[data-testid="stHeader"] [data-testid="stExpandSidebarButton"] button {
+  color: var(--compass-ink) !important;
+}
+[data-testid="stHeader"] button:hover:not(:disabled),
+[data-testid="stHeader"] button:focus-visible:not(:disabled) {
+  background-color: #ede5fa !important;
+  color: #523078 !important;
+}
+/* Native dashboard buttons only. Keep primary and secondary states distinct.
+   Do not override disabled buttons, chart controls, or sidebar navigation. */
+[data-testid="stMain"] :is([data-testid="stButton"], [data-testid="stDownloadButton"], [data-testid="stLinkButton"], [data-testid="stFormSubmitButton"]) :is(button, a):not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--compass-surface) !important;
+  color: var(--compass-ink) !important;
+  border-color: #8b8492 !important;
+}
+[data-testid="stMain"] :is([data-testid="stButton"], [data-testid="stDownloadButton"], [data-testid="stLinkButton"], [data-testid="stFormSubmitButton"]) :is(button, a):not(:disabled):not([aria-disabled="true"]):is([kind="primary"], [data-testid$="-primary"]) {
+  background-color: #6230ad !important;
+  border-color: #6230ad !important;
+  color: #ffffff !important;
+}
+[data-testid="stMain"] :is([data-testid="stButton"], [data-testid="stDownloadButton"], [data-testid="stLinkButton"], [data-testid="stFormSubmitButton"]) :is(button, a):not(:disabled):not([aria-disabled="true"]):is(:hover, :focus-visible) {
+  background-color: #ede5fa !important;
+  border-color: #6230ad !important;
+  color: #523078 !important;
+}
+[data-testid="stMain"] :is([data-testid="stButton"], [data-testid="stDownloadButton"], [data-testid="stLinkButton"], [data-testid="stFormSubmitButton"]) :is(button, a):not(:disabled):not([aria-disabled="true"]):is([kind="primary"], [data-testid$="-primary"]):is(:hover, :focus-visible) {
+  background-color: #4b238a !important;
+  border-color: #4b238a !important;
+  color: #ffffff !important;
+}
+/* Streamlit renders some button text inside Markdown containers. */
+[data-testid="stHeader"] button :is(p, span),
+[data-testid="stMain"] :is([data-testid="stButton"], [data-testid="stDownloadButton"], [data-testid="stLinkButton"], [data-testid="stFormSubmitButton"]) :is(button, a):not(:disabled):not([aria-disabled="true"]) :is(p, span) {
+  color: inherit !important;
+}
+[data-testid="stHeader"] button:focus-visible,
+[data-testid="stMain"] :is([data-testid="stButton"], [data-testid="stDownloadButton"], [data-testid="stLinkButton"], [data-testid="stFormSubmitButton"]) :is(button, a):focus-visible {
+  outline: 2px solid #6230ad !important;
+  outline-offset: 3px;
+}
+/* END Compass header and button contrast */
+
+/* BEGIN Compass toolbar icon contrast */
+/* Header is intentionally light in both appearance modes. The hosted
+   toolbar can render action icons as links or nested SVG elements. */
+:is([data-testid="stHeader"], [data-testid="stToolbar"]) :is(button, a, [role="button"]) {
+  color: var(--compass-ink) !important;
+}
+:is([data-testid="stHeader"], [data-testid="stToolbar"]) :is(button, a, [role="button"]) :is(svg, span) {
+  color: inherit !important;
+}
+:is([data-testid="stHeader"], [data-testid="stToolbar"]) :is(button, a, [role="button"]) svg:not([fill="none"]) {
+  fill: currentColor !important;
+}
+:is([data-testid="stHeader"], [data-testid="stToolbar"]) :is(button, a, [role="button"]) svg [fill]:not([fill="none"]):not([fill="transparent"]) {
+  fill: currentColor !important;
+}
+:is([data-testid="stHeader"], [data-testid="stToolbar"]) :is(button, a, [role="button"]) svg[stroke]:not([stroke="none"]),
+:is([data-testid="stHeader"], [data-testid="stToolbar"]) :is(button, a, [role="button"]) svg [stroke]:not([stroke="none"]) {
+  stroke: currentColor !important;
+}
+:is([data-testid="stHeader"], [data-testid="stToolbar"]) :is(button, a, [role="button"]):not(:disabled):not([aria-disabled="true"]):is(:hover, :focus-visible) {
+  color: #523078 !important;
+  background-color: #ede5fa !important;
+}
+/* END Compass toolbar icon contrast */
